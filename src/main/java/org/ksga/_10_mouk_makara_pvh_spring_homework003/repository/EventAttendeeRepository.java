@@ -22,7 +22,7 @@ public interface EventAttendeeRepository {
     @Select("""
     INSERT INTO event_attendees VALUES (#{attendeeId}, #{eventId})
  """)
-    void insertEventIdAndAttendeeId(Long eventId, Long attendeeId);
+    void insertEventIdAndAttendeeId( Long eventId, Long attendeeId);
 
     @ResultMap("attendeeMapper")
     @Delete("""
